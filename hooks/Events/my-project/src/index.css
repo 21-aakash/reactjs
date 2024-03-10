@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.red{
+
+  background-color: red;
+
+  height: 220px;
+  width: 200px;
+  border-radius: 5px solid black;
+}
+
+.btn{
+
+ background-color: blue;
+ font-size: medium;
+ height: fit-content;
+ border-radius: 5px solid black;
+}
