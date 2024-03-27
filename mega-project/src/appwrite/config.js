@@ -230,7 +230,7 @@ async fileDelete(fileId){
 }
 getFilePreview(fileId){
 
-    return await this.bucket.getFilePreview(
+    return this.bucket.getFilePreview(
         conf.appwriteBucketId,
         fileId
     )

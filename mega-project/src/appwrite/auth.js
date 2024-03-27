@@ -1,6 +1,6 @@
 
 // Importing configuration settings from conf.js file
-import conf from '../conf.js';
+import conf from '../conf/conf';
 
 // Importing necessary classes from the 'appwrite' package
 import { Client, Account, ID } from "appwrite";
