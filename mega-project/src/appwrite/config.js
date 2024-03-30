@@ -243,6 +243,35 @@ getFilePreview(fileId){
 }
 
 
-const services= new Service()
+const service= new Service()
 
 export default service;
+
+
+
+
+// The code provided seems to involve using Appwrite services for file upload and deletion. Here's how it works:
+
+// 1. **File Upload**: The `fileUpload` method in the `appwriteService` object is called to upload a file. It accepts the file object as a parameter and returns a promise. When resolved, it returns an object representing the uploaded file. This object likely contains information such as the file ID, name, size, etc. In your case, it appears that the `ID.unique()` function generates a unique ID for the file, which is used as the file's identifier.
+
+// 2. **File Deletion**: The `fileDelete` method in the `appwriteService` object is called to delete a file. It accepts the file ID as a parameter and returns a promise. Upon successful deletion, it returns `true`, indicating that the file was deleted successfully. Otherwise, it returns `false`.
+
+// In your code:
+
+// ```javascript
+// const file = data.image[0] ? appwriteService.uploadFile(data.image[0]) : null;
+// ```
+
+// This line checks if a new image is provided in the form (`data.image[0]`). If it is, it uploads the file using the `uploadFile` method of the `appwriteService` object. The result of this operation (the uploaded file object) is stored in the `file` variable.
+
+// ```javascript
+// if (file) {
+//   appwriteService.deleteFile(post.featuredImage);
+// }
+// ```
+
+// Here, if `file` is truthy (i.e., a file was successfully uploaded), it proceeds to delete the existing featured image associated with the post using the `deleteFile` method of the `appwriteService` object. It passes the ID of the existing featured image (`post.featuredImage`) as a parameter to `deleteFile`.
+
+// The `fileUpload` and `fileDelete` methods handle interactions with the Appwrite service for uploading and deleting files, respectively. They make use of Appwrite's SDK methods (`createFile` and `deleteFile`) to perform these operations asynchronously.
+
+// Additionally, it seems there's a `getFilePreview` method in your `appwriteService` object, which is not used in the provided code but likely retrieves a preview of a file based on its ID.
