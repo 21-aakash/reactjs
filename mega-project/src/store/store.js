@@ -4,6 +4,7 @@ const store = configureStore (
 {
   reducer: {
     auth: authSlice,
+    //TODO: post :postSlice,
   }
 
 });

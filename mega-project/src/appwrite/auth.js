@@ -49,7 +49,7 @@ export class AuthService {
     async login({ email, password }) {
         try {
             // Creating a new session using the provided email and password
-            return await this.account.createEmailSession(email, password);
+            return await account.createEmailSession(email, password);
         } catch (error) {
             // If any error occurs during login, throw it
             throw error;

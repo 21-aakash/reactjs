@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux'
 const Header = () => {
 
 
-  const autstatus = useSelector((state)=>{state.auth.status})
+  const authStatus = useSelector((state)=>{state.auth.status})
 const navigate = useNavigate();
 
 const navItems = [

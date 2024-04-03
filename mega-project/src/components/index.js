@@ -6,9 +6,13 @@ import Logoutbtn from "./Header/Logoutbtn";
 import RTE from "./RTE";
 import Signup from "./Signup";
 import Login from "./Login";
-import PostForm from "./post-form/PostFrom";
+import PostForm from "./post-form/PostForm";
 import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
+import Input from './input';
+import Select from './Select';
+import Button from './Button';
+
 
 export {
   Header,
@@ -22,4 +26,8 @@ export {
   PostForm,
   PostCard,
   AuthLayout,
+  Input,
+  Select,
+  Button,
+
 };

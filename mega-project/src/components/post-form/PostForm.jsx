@@ -1,10 +1,10 @@
 import React, { useCallback } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Inout, Select, RTE } from "../index";
+import { Button, Input, Select, RTE } from "../index";
 import appwriteService from "../../appwrite/config";
 
 import { useNavigate } from "react-router-dom";
-import { UseSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 const PostForm = ({ post }) => {
   const { register, handleSubmit, watch, setValue, control, getValues } =
@@ -18,7 +18,7 @@ const PostForm = ({ post }) => {
     });
 
   const navigate = useNavigate();
-  const userData = userSelector((state) => state.user.userData); // Fetching user data
+  const userData = useSelector((state) => state.user.userData); // Fetching user data
 
   const submit = async (data) => {
 
